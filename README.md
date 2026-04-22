@@ -17,7 +17,7 @@ developer-portal/
 - CSS3 (Gradient, Flexbox, Grid)
 - Vanilla JavaScript
 - Responsive Design
-- 
+  
 ## Lisans
 
 Bu portal template'i açıkça kullanılabilir. Kendi uygulamalarınız için özgürce kullanınız.

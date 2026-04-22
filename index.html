@@ -1,551 +1,414 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Depom Yanımda — Privacy Policy</title>
-  <style>
-    :root {
-      --bg: #fafafa;
-      --surface: #ffffff;
-      --text: #1a1a2e;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --accent: #32323C;
-      --accent-light: #f3f4f6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaptainChair - Geliştirici Portalı</title>
+    <meta name="description" content="CaptainChair tarafından geliştirilen uygulamalar ve hizmetler">
+    <meta name="theme-color" content="#6366f1">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' width='100' height='100'/><text x='50' y='65' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>C</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 15px;
-      line-height: 1.65;
-    }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      z-index: 100;
-    }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .nav-inner {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6366f1;
+            text-decoration: none;
+        }
 
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--text);
-      text-decoration: none;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
 
-    .nav-logo span {
-      width: 28px;
-      height: 28px;
-      background: var(--accent);
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 14px;
-    }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    .lang-toggle {
-      display: flex;
-      background: var(--accent-light);
-      border-radius: 8px;
-      padding: 3px;
-      gap: 2px;
-    }
+        nav a:hover {
+            color: #6366f1;
+        }
 
-    .lang-toggle button {
-      background: none;
-      border: none;
-      padding: 5px 14px;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all 0.15s;
-    }
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            color: white;
+            text-align: center;
+        }
 
-    .lang-toggle button.active {
-      background: white;
-      color: var(--text);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
 
-    .hero {
-      max-width: 720px;
-      margin: 64px auto 0;
-      padding: 0 24px;
-    }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
 
-    .hero .label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    .hero h1 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
-    }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
 
-    .hero p {
-      color: var(--muted);
-      font-size: 1rem;
-      max-width: 500px;
-      margin-bottom: 28px;
-    }
+        .btn-primary {
+            background: white;
+            color: #6366f1;
+        }
 
-    .hero .meta {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
 
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--accent-light);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 5px 12px;
-      font-size: 0.78rem;
-      color: var(--muted);
-      font-weight: 500;
-    }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
 
-    .pill.green { background: #f0fdf4; border-color: #bbf7d0; color: #16a34a; }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
 
-    main {
-      max-width: 720px;
-      margin: 48px auto 0;
-      padding: 0 24px 96px;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 40px 0;
-    }
+        section {
+            background: white;
+            margin: 2rem auto;
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
 
-    .section-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
+        section h2 {
+            color: #6366f1;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
 
-    .section-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      letter-spacing: -0.02em;
-    }
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
 
-    .section-desc {
-      color: var(--muted);
-      margin-bottom: 24px;
-      font-size: 0.95rem;
-    }
+        .app-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
 
-    .data-grid {
-      display: grid;
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
+        .app-card:hover {
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.2);
+            border-color: #6366f1;
+        }
 
-    .data-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      background: white;
-      padding: 16px 20px;
-    }
+        .app-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
 
-    .data-icon {
-      width: 32px;
-      height: 32px;
-      background: var(--accent-light);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 15px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
+        .app-card h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
 
-    .data-row-text strong {
-      display: block;
-      font-size: 0.88rem;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
+        .app-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
 
-    .data-row-text span {
-      font-size: 0.83rem;
-      color: var(--muted);
-    }
+        .links-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
 
-    .not-collected {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+        .link-item {
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #6366f1;
+            border-left: 4px solid #6366f1;
+            transition: all 0.3s;
+        }
 
-    .not-collected .pill { font-size: 0.78rem; }
+        .link-item:hover {
+            background: #eff6ff;
+            padding-left: 1.5rem;
+        }
 
-    .service-list {
-      display: grid;
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
 
-    .service-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: white;
-      padding: 16px 20px;
-    }
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
 
-    .service-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+        .hidden {
+            display: none;
+        }
 
-    .service-badge {
-      font-size: 0.78rem;
-      font-weight: 700;
-      background: var(--accent);
-      color: white;
-      padding: 3px 10px;
-      border-radius: 5px;
-      letter-spacing: 0.02em;
-    }
+        #privacy-content {
+            line-height: 1.8;
+            color: #555;
+        }
 
-    .service-desc {
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
+        #privacy-content h3 {
+            color: #6366f1;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-    .service-link {
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-      transition: color 0.15s, border-color 0.15s;
-    }
+        #privacy-content p, #privacy-content li {
+            margin-bottom: 0.8rem;
+        }
 
-    .service-link:hover {
-      color: var(--text);
-      border-color: var(--text);
-    }
+        #privacy-content ul {
+            margin-left: 1.5rem;
+        }
 
-    .contact-block {
-      background: var(--accent);
-      border-radius: 16px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
 
-    .contact-block h2 {
-      color: white;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
+            nav ul {
+                gap: 1rem;
+            }
 
-    .contact-block p {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.85rem;
-    }
+            .cta-buttons {
+                flex-direction: column;
+            }
 
-    .contact-btn {
-      background: white;
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.85rem;
-      padding: 10px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: opacity 0.15s;
-    }
-
-    .contact-btn:hover { opacity: 0.9; }
-
-    footer {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 24px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
-    }
-
-    footer span { font-size: 0.78rem; color: var(--muted); }
-
-    .section-tr, .section-en { display: none; }
-    .section-tr.visible, .section-en.visible { display: block; }
-  </style>
+            section {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#" class="logo">CaptainChair</a>
+            <ul>
+                <li><a href="#" onclick="showHome(); return false;">Anasayfa</a></li>
+                <li><a href="#" onclick="showApps(); return false;">Uygulamalar</a></li>
+                <li><a href="#" onclick="showPrivacy(); return false;">Gizlilik Politikası</a></li>
+                <li><a href="#" onclick="showContact(); return false;">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="#">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAYDklEQVR4nO2de3BUdZbHz+2+STr9yIu8SUIiGEOIUBhEHQokLFOWpTsq5cwuio8atWbdKnVrKXdkKWv/2NLRrdqtdRCccpWRZX2OuwOjpRY+0OCIaCAD4RHigwB5kndCOp1+3a3zu/3rdEh3p5N+3b6/86lqknQunfs439/jnPM7PxmipLKyEkpLF/1Tfn7+DRaLtcZsNhcripIFAHK0n00QAbglSRqx2+294+OXW/v7+77p6rrwfHt7e1QfOi8jLS0thSVLav61rKziDovFssxgMBq8Xi8oihfwK0HEAVlRlAUWi2WB1WqrLSlZuGnZsmufHR0dOdnZ2fGnH344+3R3d/fcP3QuBxcVFUF9/Q1vLFxYfrcsy2kulwvcbjeK04O/lyTJ4DtUmvOZEMTsKGpD61HwewAwZmVlL8/Ly19eW1v36wsXzr3T3Hx8S29vR8QfGLEA1q/f+Jvq6pp/kCSDyemcBKfT5TYaDQaf0Rvne0UEMQdYwypJkr+BdbvdXqfT5TUYpLRFixbfW1FRdfeZM6f+/dChg9sj+cBZBVBWVgZr1/7VsZyc3JUOxwS+5UGjNxolGuMTScdni9gIK07nJI5EMurqlv9zWVn5rYcOfXZdR0f43iCsEdfULIO1a9ePAEhZdrsdW3wjtfaERsGOAe1ZsdsnPFZr1spbb71j5NChz7NbW0+F/E8hBbBixQpYs6bB43A4DIqieIxGA7X4RCogoa263S4cqWRt2PBTT0aGbDx+/HjQg4MadU1NHTP+iQk25PFKkkStPpFSoM0qiuJFG0Zbnpz0GFtbT844boYAKioqYO3am8ccDgdONJQAz47uCZhb6RpFUZJ9CgkBbRdFgLaMNj08PGrr6bkw7ZgZAlizpuEEAFhx2CNSy482gW5dEZBlGQTROhcBTo6tDQ0NJ958c8/ywN9PE8DatQ3P5uTkXuub8Ao15h8buwwOh1P3hoFCz8hIh+xsa7JPJWFgQ45ue7Ttdes2/Kax8bNt/Hd+I1+woBSWLq3b6nBMeHzeHmHAIYHT6QaDQefWz4wBfecuds2iDPkQtGm07Zqa2n/8/vvWbV1dXex9vwDq61e+aTBI6QCKG3TfDs4Er1iQobGogXrfnNaQvnz5qre7uv70N8AFkJ+/ECorq+6enJzEA4Rq/QlxUIdCk0p5efldBQUF0NfXpwrgmmuWPCPLsjw56XRThJfQMZLXq7hlOS2tpqbumb6+g9uZsZeVld+JHhDM7Un2GRJEPEEbd7mcUF6+6E4A2C6XlVVCVlZOjceDWZ1AAiD0DkvdN5stNWj7cnl5xVMGg8Hgdovl9yfERU3tMRrR9mVcyYULWQhCJNDmCwryV8tWq+0a3youGv4QoiChzVssthrZbDYX4Q8iBUUIscG8aXUeYC6WfQvYQdToCCEkzNYVRbHJVL2BEBiZjJ8QGhIAITQkAEJoSACE0JAACKEhARBCQwIghIYEQAgNCYAQGhIAITQkAEJoSACE0JAACKEhARBCQwIghIYEEIDXq+i+Jh5WvzMadX6Rc4AEgIuhDQaw2cwwMTGZ7FNJCCZTBrtmUcqkh4ME4CuOm5GRwV6iQMavQgLwQQYhJiQAQmhIAITQkAAIoSEBEEJDAiCEhgRACA0JgBAaEgAhNCQAQmhIAITQkAAIoSEBEEJDAiCEhgRACA0JgBAaEgAhNCQAQmhIAITQkAAIoSEBEEJDAiCEhgRACA0JgBAaEgAhNCQAQmhIAITQkAAIoSEBEEIjhAAkSWIvKoAbGfxeiXC/hBCAx+MBp9MJsiwL8VCjAY3f7XZDeno620NA7+haAPgw0fhNJhM8/PCDUFJSDG63x7cLDO2SMh21xcdGoqurG9544x2YmJgAo9Go60YjLgJQhxzqdjyJ5MoHhecxMeGANWtuYi8iMq66qgpaW9vgk08Ogs1mDXpftfB8Y0FcBOByuWFyUt1uKNw5R3pB6mFKkPf8P7Ftf9QdXmZ+Znp6Gni9XvZ9U9Mx+PTTz1nLFuxYMVF7yo0bG6C+fiV7Jy0tLeTRWnu+0RAXAYyNXWY3SUrQjnN4s3Bog4Ye7G+i8eN4Frv03/9+LwwODkJ6egYoijch56d1JMkATuckXLhwEerqaiEzMzPsvdHa842GmAsAVY+7LSZyAsXvCd6o4PdHfRNbterqJfD1198m7NxSierqq9nkVyW4oWnz+c6fOM0BEj8+DAe/aTjsefzxv4dNmzp1PbGbHxKUlZVGZNhae77RoGsvUDBU/3ayz0J7oFEnakijJYQQADd4nAvs2PE7+PrrIzQHCECdAzjhxhuvh8cee5S5QkUhTlcqJcnDooT17+NDbmv7LuBYQkVhr7a278HlckUgAG0+3/kghNR5z47ejV/+8n7m35ZlIw2FfOD9QS/Lxo3r2T0SCSEEwMEh0PXX17MXERzuMhYFoQSAD/abb5pYIIx6gCmmeoAG4RqHuAkgHj7bSAjmouM/Tw+EpZMr1Ad6f3B+FBgImw0tPd9oEKoHmB4IS9ZETouoljw9ECYGQgiAAmGREHkgTE/EXAA8UzAeLqtwTAW4wrfsFAgLTqSBMK0/37kiRA9AgbDwUCBMEKYHwojpzCUQph+EuNLAQNhDDz3gWw+gjnVpOKT40o3dzA2KOffYU6penuBDHL7GOnHp0PF7SHFMhUgG4W8UPthVq65jLyI8smxgi2TwnvHFRByMGaBgEiUA/Dvq5DxFVoRpGf4wRcx85OA9UFfEAYyOjkJXVw9cvmxnBsZb9qGhUcjOzmbrqWe2wEbwej1xb+hUn78CTqeLxXCuFGIsEE4Aorn5roQb//DwCHzyyedw8uQZGB8fB49nunFhPKC4uCRowCsvL7GNB4oAl2BOTNjBbh9nP8eqARNOACKDhoMNwLlzF2Dv3rdgaGgYMjNNbNx/pUGhhwyHQGqNoJmfk0jwHFCQeJ4mUyYMDQ0wIcdCBHFMhVASGm1N5KQsFeGtJg53du/eyzxiWPEBjTxUEaxwk+BEw88Rh2R5eQtgYKA/Jp8bl0AYtirBb+iMd2b5ffBjgx2XkZGu+xo20YIT13ff3cdKxeAzQuNPNbDlz8gwgc2WBSMjw1EPaeOyKD4zE7uq9JiO1QIJ9Zlk/MHhKc7NzSfg3LnzYLPZUtL4OXg9FouVzQei9UbFZQjEDTFeXSUZ+tzgtT6//bYZZDktLt6URIOCzsw0w+joiPYEQGgH3gvjhLe7u4dlxOqhAcFrwHSWaBtZEoDO4QLo6+sHh8PBPCn6EACwlA3sCaK5HhKAIIyP25mvXz9l4hV/hDiaeQAJQBD0YfSxhwRACA0JgBAaEgAhNCQAQmhIAITQCCeAqSho8sqiBLrs4u2dwVr+AF7yAoVAOAFMT55KfvZovDMr+eXi7iqkgZkIJQA0ttOnW+EPf/ijv0VMRm67xZLpD0iNj0/E9Rz4Tpn41Ww26SIPKJYIIYBA+3r11f+Go0ebwWq1JMUY0BCzs21gMEhseDIyMhZ3AWCktKCgABYvXsyqPtC6iSmEEAAHDQ1bQ1zriusHkjEuVltis18Abnd8x+dcAHrJAYo1QgmAw6sdJEsAas+jCiDe58H/Hhl/cIQUAEFwSACE0JAACKEhARBCQwIghIYEQAgNCSCFCBfACnRzBh5HBcPCQwJIEdDAMaAVDLRvg8Ho/9njcfuj3zwQpscUiFisbyYBpAiYxFddXc2i2GqGpwo38Pb2H9hXrJRQWbmYfZ2qzwTgcrlhctKhm94Arw1LvJSVlcO5cz9Ou965QALQOGiwmL+zcGEZLFtWxww50Ib577u6LrKfsYhsSUmJv/4PvoxGmZUR7O7u0o0AuPArK69ikf3z589BWtrc01tIACmAWgQqjT1wl8s5Y4yPAuDGji/8GQIKyuLwJ9TwKZVRReCCqqrFrOZRb+/cC3+RAFIEXuDqykltsEluJMfoCewBrr76GnA6J2FoaGhOIiABECkN30UGBV5TUwsnTvyF7SYTaaVwEgCR8vCM17S0DFi6dBkTAV8ENBskACKh8HlJrLeqUle+ucFqtbGe4NSploj+HwmASBjYSuMOL1iiHYcpaLCxFAJ3COAOMkuWVENbW+us7lESAJEQ0PjRMHNzc/2G2tfXxza5iIcISkpKmWdIdY+GnhSTAIi4g8a/YEE+5OXl+VfjYcuM8Yqenh4YH78ccxGge7SysooF/3p6ukOKgARAxBU0doxeY8vPy5gHpjAUFRVBd7eHDYliOy+Q/O5R3GJ1eHiQDb2uFAEJIAWYqw8/MCiWbPDccWIaar84fK+oqBg6OztZqx3LeAX/m0uX1sLx4+geHWdR8cD7QgLQODwJjntO8DUzyGXwGby6+B2HF3zyxzfIS2YgjO/pG0yQfOPu4uJi6OrqjNn+vxDgHsWWv7ZWdY/ivQzcVYYEoGH4vrhY0gQN+vLly75hROBRaleP+2Xhg8XjhoeHmFEh+PDxe9wXOFnXgDu8WyyWoL0AN1K8xsLCIjZejyW8MJjZbGXu0ZMnT0wTGQlAo+BDwu1MKyoq/EZy8eKFkK1jTk6u//+dPXvGnxlaUFDEahChUGLte48EPF8UbnZ2TkiXJDdSFEl+fgH09V2Ky6Q4NzePzQnw/vgbCP3sGaUf+DNRC2gZmFuPD39CEVjqkfcEfOiDQ6RkwbM2MUensLAw5BCHixwnzOrxg3FxjxYXlzDPEKZQY+asjP+gv1TPyVKpSjT7LWupUUNDHhsbZYK2Wq1h0xRUl+kC1mKPjY3FRQSLFlWxz8Zzki0WM9jt9nkvKCCISMGhDTa4s2VroggKCgpZTxB796jaOJSXL4LOzgsg5+XlQk9PLxMAQcQLPs7HnP3S0oWz7u/L3aPoGYplQd+pSbcJli2rBbmsbCGcPHlaR/vHEloFjR6DUiiC4uLSsMeiSxcnqlwEsXSP+v4C62XkJUsWgyR9SsZPJAQUAQ65+/svMbdn6MX6EhMBukdRBLicM1aoy0SN0Nc3AHJ19dWQlWWLy1iLIIKBdjY6OspiFJgf5PV6QuzWw334Zra/waVLsXOPqhNiN8gLFuTBVVdVwbFjfwGcEOuxfAahPdCQBwcH2NwzKysrpGdIHbN7ICtLdY8ODg5GvNorEtjM96abVkNT09GYfCAxX2Zu2qf3tbwYoEPPEIoAW/lwwyGeTo0iwN4jVj0BE0B9/UooLS2BgYHBOa+qJ+bPlZtXoEHwvB5eyQGrQPCiV/p7LqroL13qhdLSUl9ZE2/IzQvxnuTnq+7R8fFxNoSKFtnjUVfp3HLLT2H37j1s0oHdERF/cGI3MqK2Zrg6Clu4srIy6OzsgIGBARgZGYS2ttMsnQHzWPQId4/iugB0j842vMEOUc0e7fCVf4muh5Sx1cE/2NCwDr744hBcvNjBBEFzgfiBrbyaoz7MfsbnrU4EFb87mvcA+D26ASsqKmeNoqYqeD2YrIc9AS6SCYea6qFmj3Z3d0dfGpF3wxih27JlMzz77L/psKvVJtMNOfgEEHyC0Tuqe3Qc+vr6mccnnA3iMAmzX9GNGi0y/+MogtraGrjrrp/B22//L+TkZNNQSDOI0SBhy475OZgFi6OQ2dIl+DHRNNj+/Acugk2b7oDOzi74858PMxG43SQCInHw0o6ZmZmzRn9jMVKZlgDE/9ivfvUQjI1dhpaWk34frV7Q2/iZiI4ZAkBVoSdo69bH4be/3QVNTc2QnZ2lmTWm0YITS/Q0xDKYMhfwHuPfpqi7NpiRAspFgOOrrVufgL1734QDBz5h8QEURipvuoxGV1xcBMePt/ij3om+FHV1FgoxOUsUU4PEPZSgOdBcBNhSPfjgFli69Bp46613oaurmwkDS3VDQPUBrcNHPXiujz32d7BiRV0S5zYK87j19w/Ayy//V0rcv0STyFsSchGAKgLV5XTDDddDXd0y+PjjT+GLL76E3t5e/w4dvDvX4tj6ylQCPGdM/Lv99luTel7AFof0wYsv7mS9Kp5jYMUH/j3PmeeTwWDl0a9E/f/47Ay+yPLU8akitkSeZ9hVMHjf0AeNDwCHDHfe+dcsYoyT4+PHT0B7+wWWnORwTPqDNloCDQiXewYG9bhBJRv0cixdWgPHjjVLGRkmBT0fZrOd3UtMF+ahfq/XDTk5eew5TEw4Zr3HeG12u4M5LrBxslgmwWg0+NcJaxsu1MQ9n4juCG+J8JWZaYLVq1exF/48PDzCkpNUQ1NAWx2BWjG4qKhQ/cnXGvKKAMkC7xtGdXfu/C20trYq/P6q8ywTW7Q9FeZXwGbLYr9Do1Y9cuFusjKtBAovi/L99z/AwYOHWI+jtYaKw20ncA+0eBNxkxBY0m4qecsAubk57JUKaGWYxs/DarXAqlX1CfmbKCq3G4NH2l35x09LTQtJDHPuE4ONq9UT1+ZNBQ2nFc/NiTAzXToSeGU4p9Olsd45GOr18bhTIp5Z1INC1bgg6qw8EZm7MOd3j7XqpAgFryCdCLQ+KyIEI3Bj70QEC0kAhKbgAsDCWOgQiPd8hQRAaA40elwvYTLNnhAXLSQAQpOMj9vZQvh4z11IAITmUAOYE6wXiHfcggRAaBIc+mBFaVwiSQIghAN7Adw8b2Cgn22wBz5RxBoSAKFZUATYC2BaCG6wgVm0gTGNWAhCVhTFLUkSCYHQJGjwuMMMJgeq2ccyEwAW0sLNNKIcHrmxKsQYAOT64tCpEy4khIEHxLAn4Il+4+NjvmpxefPpCRQ15CCNyr29vT1FRUW5iqIoUirFywnhmL62QWIVJLAXmM82spghOzQ01CufP3++taioaKlPAHE6dYKILbyeFWaOBtsAexa8smw0Dg72n5Wbmpq+Wb169V1aTZEliFijVpeTob29/Yh84MCBg48++qjXwCuwEoTOkSTJ6PG4vadOtRyU9+/ff2RgYKA1Pz+/VlEUryRCHT5CWNDG09LSDb29Pa0nThw9wtyfH3zwwb7777+/1uPxeGVZJgEQusXr9XozMjIMp0+f3Ac8ELZr167X7rvvvicNBoNM3iBCx+D6a6PL5XR/+eWX24EL4MiRI981Njb+8eabb/6Fx+NxGzHaQBA6w+v1esxmi3z06Dfv/vhjK3vPb+jbtm37l6+++upOADBSUIzQIQqGERTF69y/f99m/qZfAIcPH259/fXX/+Pee+99yu12u2XtF5EhiIjxeDyerKxs+eOPP3y+vb3N//40I3/qqae2rV+//raFCxdei90FuUYJPYC2bDKZ5O7uzpbXXnt5e+Dvpgmgo6MDHnnkkb997733jiiKYpEkidyiOkGWjSlVGSJywl8Tuj0NBoNBUeDy7t27ll/5+xnDnA8//PD0E088sfnFF1/cj8lHsiyTCFIa1UCwxD2KQC8Rf7wOHKXzqnohjvHi72y2LOXll3dsPn369Ixjgo7zd+7c+b7Vat383HPPven1eg2KotBwKEXhjX5hYSHYbFa21lYPexOgYeP6AExqC5YNyofwNpvNu2fPq5s///zT94N9TsiJ7vPPP/+O3W6feOGFF/5HkqQs38TYSN6h1IInjWFN18WLq9iGJ+E3pU4dLBYL+4piCBjeKTjhxTG/oiijr7zy0pbPPjvwXqjPCOvp2bFjx3vffffd2pdeeum1ysrKlb7NMTBOQEJIQdasuRGam0+k/DCIt/5msyWwbIriVVVtRG9Pd3dX8549v7uupaUl7GfN6ur86KOPTjQ0NFy3ffv2Zx5++OGtAJCBJ4ABM4OPGF4bEQf4OLmiogx+8pMbWJXonJyslN0AEa8FNxXHdhjTdxTF65Ukg2w2W4wej8dx8ODH//nKK7u2RfJZEfn629vb0Tu0fe/evW89+eSTv7799tt/Ifv2qffV2/dIUwD1DtoEn9Vtt90C/f390NJymm1Hyt9PBTBNB0un5+XleXEY5/F4jJi7ZjJlGpzOSVdLS/O777//f/ecOXMm4s+cU7CrsbGxpbGxccu6deue2bJlyz0bN278WVVVVZ0x2QX3iVnhpe3T0mR44IF7YN++D6Cp6RgbQmBbxvcu0yK8irbRaJQKCwtQAEZfCUXv8PDwqa+++mL/oUMHn25ra4vg06Yzr2hvY2PjmcbGxqcB4OlNmzbduGHDhpvr6+tXV1RU1JSUlBRJkpRNFSe0x5QI0uDnP78DVqxYBocPfwsdHZ1gt08k+/RCgudrMmW6c3JyRh0OR8/Zs62tFy+eO3Lq1PHGY8eOfR3NZ/8/WTKfM7MQJj8AAAAASUVORK5CYII=" style="width:36px;height:36px;border-radius:8px;" />
-      Depom Yanımda
-    </a>
-    <div class="lang-toggle">
-      <button class="active" onclick="setLang('tr', this)">TR</button>
-      <button onclick="setLang('en', this)">EN</button>
-    </div>
-  </div>
-</nav>
-
-<!-- TÜRKÇE -->
-<div class="section-tr visible" id="tr">
-  <div class="hero">
-    <p class="label">Yasal</p>
-    <h1>Gizlilik<br>Politikası</h1>
-    <p>Verilerinizin nasıl işlendiğini şeffaf bir şekilde açıklıyoruz.</p>
-    <div class="meta">
-      <span class="pill green">✓ Veri satışı yok</span>
-      <span class="pill">Son güncelleme: 02.04.2026</span>
-      <span class="pill">v1.1.0</span>
-    </div>
-  </div>
-
-  <main>
-    <p class="section-label">Veri Toplama</p>
-    <h2 class="section-title">Ne topluyoruz?</h2>
-    <p class="section-desc">Uygulamayı kullanmak için hesap açmanız gerekmez. Verileriniz cihazınızda kalır.</p>
-
-    <div class="data-grid">
-      <div class="data-row">
-        <div class="data-icon">💾</div>
-        <div class="data-row-text">
-          <strong>Yerel Depolama</strong>
-          <span>Depo, ürün, müşteri ve tedarikçi bilgileri yalnızca cihazınızda saklanır, sunucularımıza iletilmez.</span>
+    <main id="home-section">
+        <div class="hero">
+            <h1>CaptainChair - Geliştirici Portalı</h1>
+            <p>Mobil uygulamalar ve yenilikçi çözümler</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="showApps(); return false;">Uygulamaları Keşfet</button>
+                <button class="btn btn-secondary" onclick="showContact(); return false;">İletişime Geç</button>
+            </div>
         </div>
-      </div>
-      <div class="data-row">
-        <div class="data-icon">🐛</div>
-        <div class="data-row-text">
-          <strong>Hata Bildirimi (isteğe bağlı)</strong>
-          <span>Yalnızca siz gönderirseniz iletilir. İçeriği tamamen siz belirlersiniz.</span>
+    </main>
+
+    <section id="apps-section" class="hidden">
+        <div class="container">
+            <h2>Uygulamalarımız</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-icon">📦</div>
+                    <h3>Depom</h3>
+                    <p>Depo yönetim sistemi. Hive ile yerel veri depolama ve Provider ile state yönetimi sağlayan Flutter uygulaması.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🚀</div>
+                    <h3>Yakında Yeni Uygulamalar</h3>
+                    <p>Daha fazla inovatif uygulama geliştirme aşamasındadır. Bizi takip edin.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="data-row">
-        <div class="data-icon">📱</div>
-        <div class="data-row-text">
-          <strong>Cihaz Güvenlik Kontrolü</strong>
-          <span>Root/jailbreak ve emülatör tespiti güvenlik amaçlı yapılır, bu bilgi saklanmaz.</span>
+    </section>
+
+    <section id="privacy-section" class="hidden">
+        <div class="container">
+            <h2>Gizlilik Politikası</h2>
+            <div id="privacy-content">
+                <p><strong>Son Güncelleme: 22 Nisan 2026</strong></p>
+                
+                <h3>1. Giriş</h3>
+                <p>CaptainChair, kullanıcıların gizliliğine saygı duymaktadır. Bu Gizlilik Politikası, uygulamalarımız aracılığıyla topladığımız verileri açıklamaktadır.</p>
+
+                <h3>2. Toplanan Veriler</h3>
+                <p>Uygulamalarımız aşağıdaki verileri toplayabilir:</p>
+                <ul>
+                    <li>Cihaz bilgileri (model, işletim sistemi sürümü)</li>
+                    <li>Uygulama kullanım istatistikleri</li>
+                    <li>Çökmeler ve hata raporları</li>
+                    <li>Google Mobile Ads tarafından sağlanan reklamcılık kimlikleri</li>
+                </ul>
+
+                <h3>3. Verilerin Kullanım Amacı</h3>
+                <p>Toplanan veriler aşağıdaki amaçlarla kullanılır:</p>
+                <ul>
+                    <li>Uygulamanın performansını geliştirmek</li>
+                    <li>Sorunları tanılamak ve çözmek</li>
+                    <li>Kişiselleştirilmiş reklam göstermek (Google Mobile Ads)</li>
+                    <li>Hizmetlerimizi iyileştirmek</li>
+                </ul>
+
+                <h3>4. Üçüncü Taraf Hizmetleri</h3>
+                <p>Uygulamalarımız aşağıdaki üçüncü taraf hizmetlerini kullanabilir:</p>
+                <ul>
+                    <li><strong>Google Mobile Ads:</strong> Reklam gösterimi için</li>
+                    <li><strong>Firebase Analytics:</strong> Uygulama analitikleri için</li>
+                    <li><strong>Crash Reporting:</strong> Hata raporlaması için</li>
+                </ul>
+
+                <h3>5. Çocukların Gizliliği</h3>
+                <p>Uygulamalarımız 13 yaş altındaki çocuklara yönelik değildir ve bilerek çocuklardan veri toplamayız.</p>
+
+                <h3>6. Veri Güvenliği</h3>
+                <p>Kullanıcı verilerini korumak için endüstri standardı güvenlik önlemleri alınmaktadır.</p>
+
+                <h3>7. Kullanıcı Hakları</h3>
+                <p>Kullanıcılar aşağıdaki haklara sahiptir:</p>
+                <ul>
+                    <li>Toplandığı veriler hakkında bilgi talep etme</li>
+                    <li>Veri silmeyi talep etme</li>
+                    <li>Veri işlemeyi iptal etme (uygulanabilir olduğunda)</li>
+                </ul>
+
+                <h3>8. İletişim</h3>
+                <p>Gizlilik politikası hakkında sorularınız varsa, lütfen bize contactus@captainchair.com adresinden ulaşın.</p>
+
+                <h3>9. Politika Değişiklikleri</h3>
+                <p>Bu politika zaman zaman güncellenebilir. En son sürüm her zaman bu sayfada bulunur.</p>
+            </div>
         </div>
-      </div>
-      <div class="data-row">
-        <div class="data-icon">📣</div>
-        <div class="data-row-text">
-          <strong>Reklam Kimliği</strong>
-          <span>Google AdMob, kişiselleştirilmiş reklam gösterimi için cihazınızın reklam kimliğini kullanabilir.</span>
+    </section>
+
+    <section id="contact-section" class="hidden">
+        <div class="container">
+            <h2>İletişim</h2>
+            <div class="links-section">
+                <a href="mailto:contactus@captainchair.com" class="link-item">
+                    📧 E-posta Gönder
+                </a>
+                <a href="https://github.com/CaptainChair000" class="link-item" target="_blank">
+                    🐙 GitHub Profili
+                </a>
+                <a href="#" class="link-item">
+                    🔗 Diğer Bağlantılar
+                </a>
+            </div>
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #f0f9ff; border-left: 4px solid #6366f1; border-radius: 0.5rem;">
+                <h3 style="color: #6366f1; margin-bottom: 0.5rem;">Bize Yazın</h3>
+                <p>E-posta: <strong>contactus@captainchair.com</strong></p>
+                <p>Konu: Geliştirici Portalı ile ilgili sorularınız</p>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="not-collected">
-      <span class="pill">📍 Konum yok</span>
-      <span class="pill">🎙️ Mikrofon yok</span>
-      <span class="pill">👤 Kimlik verisi yok</span>
-      <span class="pill">📷 Kamera erişimi yok</span>
-      <span class="pill">☁️ Otomatik bulut yedekleme yok</span>
-    </div>
+    <footer>
+        <p>&copy; 2026 CaptainChair. Tüm hakları saklıdır.</p>
+        <p>Google Mobile Ads, Google'ın tescilli markasıdır.</p>
+        <p><a href="#" onclick="showPrivacy(); return false;" style="color: #6366f1; text-decoration: none;">Gizlilik Politikası</a></p>
+    </footer>
 
-    <hr class="divider">
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section, main').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
 
-    <p class="section-label">Üçüncü Taraflar</p>
-    <h2 class="section-title">Hangi hizmetleri kullanıyoruz?</h2>
-    <p class="section-desc">Yalnızca iki üçüncü taraf hizmet entegre edilmiştir.</p>
+        function showHome() {
+            document.getElementById('home-section').classList.remove('hidden');
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            window.scrollTo(0, 0);
+        }
 
-    <div class="service-list">
-      <div class="service-item">
-        <div class="service-left">
-          <span class="service-badge">Supabase</span>
-          <span class="service-desc">Hata bildirimi altyapısı</span>
-        </div>
-        <a class="service-link" href="https://supabase.com/privacy" target="_blank">Gizlilik politikası ↗</a>
-      </div>
-      <div class="service-item">
-        <div class="service-left">
-          <span class="service-badge">AdMob</span>
-          <span class="service-desc">Reklam gösterimi — Google LLC</span>
-        </div>
-        <a class="service-link" href="https://policies.google.com/privacy" target="_blank">Gizlilik politikası ↗</a>
-      </div>
-    </div>
+        function showApps() {
+            showSection('apps-section');
+        }
 
-    <hr class="divider">
+        function showPrivacy() {
+            showSection('privacy-section');
+        }
 
-    <div class="contact-block">
-      <div>
-        <h2>Sorularınız mı var?</h2>
-        <p>Gizlilik ile ilgili her konuda bize ulaşabilirsiniz.</p>
-      </div>
-      <a class="contact-btn" href="mailto:destek@fomeontr.com">destek@fomeontr.com</a>
-    </div>
-  </main>
-</div>
-
-<!-- ENGLISH -->
-<div class="section-en" id="en">
-  <div class="hero">
-    <p class="label">Legal</p>
-    <h1>Privacy<br>Policy</h1>
-    <p>We explain transparently how your data is handled.</p>
-    <div class="meta">
-      <span class="pill green">✓ No data selling</span>
-      <span class="pill">Last updated: 02.04.2026</span>
-      <span class="pill">v1.1.0</span>
-    </div>
-  </div>
-
-  <main>
-    <p class="section-label">Data Collection</p>
-    <h2 class="section-title">What do we collect?</h2>
-    <p class="section-desc">No account is required to use the app. Your data stays on your device.</p>
-
-    <div class="data-grid">
-      <div class="data-row">
-        <div class="data-icon">💾</div>
-        <div class="data-row-text">
-          <strong>Local Storage</strong>
-          <span>Warehouse, product, customer and supplier data is stored only on your device and never sent to our servers.</span>
-        </div>
-      </div>
-      <div class="data-row">
-        <div class="data-icon">🐛</div>
-        <div class="data-row-text">
-          <strong>Bug Reports (optional)</strong>
-          <span>Transmitted only when you choose to send one. You control the content entirely.</span>
-        </div>
-      </div>
-      <div class="data-row">
-        <div class="data-icon">📱</div>
-        <div class="data-row-text">
-          <strong>Device Security Check</strong>
-          <span>Root/jailbreak and emulator detection is performed for security purposes. This information is not stored.</span>
-        </div>
-      </div>
-      <div class="data-row">
-        <div class="data-icon">📣</div>
-        <div class="data-row-text">
-          <strong>Advertising ID</strong>
-          <span>Google AdMob may use your device's Advertising ID to show personalized ads.</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="not-collected">
-      <span class="pill">📍 No location</span>
-      <span class="pill">🎙️ No microphone</span>
-      <span class="pill">👤 No identity data</span>
-      <span class="pill">📷 No camera access</span>
-      <span class="pill">☁️ No automatic cloud backup</span>
-    </div>
-
-    <hr class="divider">
-
-    <p class="section-label">Third Parties</p>
-    <h2 class="section-title">Which services do we use?</h2>
-    <p class="section-desc">Only two third-party services are integrated.</p>
-
-    <div class="service-list">
-      <div class="service-item">
-        <div class="service-left">
-          <span class="service-badge">Supabase</span>
-          <span class="service-desc">Bug report infrastructure</span>
-        </div>
-        <a class="service-link" href="https://supabase.com/privacy" target="_blank">Privacy policy ↗</a>
-      </div>
-      <div class="service-item">
-        <div class="service-left">
-          <span class="service-badge">AdMob</span>
-          <span class="service-desc">Advertisement display — Google LLC</span>
-        </div>
-        <a class="service-link" href="https://policies.google.com/privacy" target="_blank">Privacy policy ↗</a>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="contact-block">
-      <div>
-        <h2>Have questions?</h2>
-        <p>Feel free to reach out for any privacy related matter.</p>
-      </div>
-      <a class="contact-btn" href="mailto:destek@fomeontr.com">destek@fomeontr.com</a>
-    </div>
-  </main>
-</div>
-
-<footer>
-  <span>© 2026 Fomeon</span>
-  <span>Depom Yanımda · v1.1.0</span>
-</footer>
-
-<script>
-  function setLang(lang, btn) {
-    document.querySelectorAll('.section-tr, .section-en').forEach(el => el.classList.remove('visible'));
-    document.getElementById(lang).classList.add('visible');
-    document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  }
-</script>
-
+        function showContact() {
+            showSection('contact-section');
+        }
+    </script>
 </body>
 </html>

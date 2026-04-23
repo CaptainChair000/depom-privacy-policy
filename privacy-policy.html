@@ -3,214 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizlilik Politikası - HangarSoft</title>
-    <meta name="description" content="HangarSoft uygulamalarının gizlilik politikası">
-    <meta name="theme-color" content="#3C3C46">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%233C3C46' width='100' height='100'/><text x='50' y='65' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #3C3C46 0%, #1E1E32 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #3C3C46;
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #3C3C46;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        main {
-            background: white;
-            margin: 2rem auto;
-            border-radius: 1rem;
-            padding: 3rem 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        main h1 {
-            color: #3C3C46;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-        }
-
-        #privacy-content {
-            line-height: 1.8;
-            color: #555;
-        }
-
-        #privacy-content h3 {
-            color: #3C3C46;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #privacy-content p, #privacy-content li {
-            margin-bottom: 0.8rem;
-        }
-
-        #privacy-content ul {
-            margin-left: 1.5rem;
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #EBEBF5;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            main {
-                padding: 1.5rem 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            main h1 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    <title>Gizlilik Politikası — Depom Yanımda</title>
+    <meta name="description" content="Depom Yanımda uygulamasının resmi gizlilik politikası. Hangi verilerin toplandığı, nasıl kullanıldığı ve gizlilik haklarınız.">
+    <meta name="theme-color" content="#32323C">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2332323C' width='100' height='100'/><text x='50' y='65' font-size='55' font-weight='bold' fill='white' text-anchor='middle'>D</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/privacy.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
+
     <header>
         <nav>
-            <a href="index.html" class="logo">HangarSoft</a>
-            <ul>
+            <a href="index.html" class="nav-brand">
+                <img src="assets/site-logo.png" alt="HangarSoft">
+                <span>HangarSoft</span>
+            </a>
+            <ul class="nav-links">
                 <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="index.html">Uygulamalar</a></li>
-                <li><a href="privacy-policy">Gizlilik Politikası</a></li>
-                <li><a href="index.html">İletişim</a></li>
+                <li><a href="index.html#ozellikler">Özellikler</a></li>
+                <li><a href="privacy-policy.html">Gizlilik Politikası</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
             </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menüyü Aç/Kapat">☰</button>
         </nav>
     </header>
 
-    <div class="container">
-        <main>
-            <h1>Gizlilik Politikası</h1>
-            <div id="privacy-content">
-                <p><strong>Son Güncelleme: 22 Nisan 2026</strong></p>
-                
-                <h3>1. Giriş</h3>
-                <p>HangarSoft, kullanıcıların gizliliğine saygı duymaktadır. Bu Gizlilik Politikası, uygulamalarımız aracılığıyla topladığımız verileri açıklamaktadır.</p>
+    <main class="privacy-main">
+        <h1>Gizlilik Politikası</h1>
+        <div id="privacy-content">
+            <p style="font-weight: 600; color: var(--primary-dark); font-size: 1rem;">Son Güncelleme: 23 Nisan 2026</p>
 
-                <h3>2. Toplanan Veriler</h3>
-                <p>Uygulamalarımız aşağıdaki verileri toplayabilir:</p>
-                <ul>
-                    <li>Cihaz bilgileri (model, işletim sistemi sürümü)</li>
-                    <li>Uygulama kullanım istatistikleri</li>
-                    <li>Çökmeler ve hata raporları</li>
-                    <li>Google Mobile Ads tarafından sağlanan reklamcılık kimlikleri</li>
-                </ul>
+            <p style="margin-top: 1rem;">Bu Gizlilik Politikası, HangarSoft tarafından geliştirilen <strong>Depom Yanımda</strong> mobil uygulamasının kullanımı sırasında toplanan, işlenen ve saklanan kişisel veriler hakkında sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
+            <p>Uygulamayı indirip kullanarak, bu politikada belirtilen şartları kabul etmiş sayılırsınız. Bu politikayı düzenli olarak kontrol etmenizi öneririz; zaman zaman güncellemeler yapılabilir.</p>
 
-                <h3>3. Verilerin Kullanım Amacı</h3>
-                <p>Toplanan veriler aşağıdaki amaçlarla kullanılır:</p>
-                <ul>
-                    <li>Uygulamanın performansını geliştirmek</li>
-                    <li>Sorunları tanılamak ve çözmek</li>
-                    <li>Kişiselleştirilmiş reklam göstermek (Google Mobile Ads)</li>
-                    <li>Hizmetlerimizi iyileştirmek</li>
-                </ul>
+            <h3>1. Toplanan Veriler</h3>
+            <p>Depom Yanımda uygulaması aşağıdaki verileri toplayabilir:</p>
 
-                <h3>4. Üçüncü Taraf Hizmetleri</h3>
-                <p>Uygulamalarımız aşağıdaki üçüncü taraf hizmetlerini kullanabilir:</p>
-                <ul>
-                    <li><strong>Google Mobile Ads:</strong> Reklam gösterimi için</li>
-                    <li><strong>Firebase Analytics:</strong> Uygulama analitikleri için</li>
-                    <li><strong>Crash Reporting:</strong> Hata raporlaması için</li>
-                </ul>
+            <h4 style="font-size: 1rem; margin-top: 1rem; color: #444;">🔹 Cihaz ve Kullanım Verileri</h4>
+            <ul>
+                <li>Cihaz modeli, işletim sistemi sürümü ve ekran çözünürlüğü</li>
+                <li>Uygulama versiyonu ve kurulum zamanı</li>
+                <li>Uygulama içi gezinme verileri, özellik kullanım istatistikleri</li>
+                <li>Çökme (crash) ve hata raporları</li>
+                <li>Performans metrikleri ve uygulama yanıt verme hızı</li>
+            </ul>
 
-                <h3>5. Çocukların Gizliliği</h3>
-                <p>Uygulamalarımız 13 yaş altındaki çocuklara yönelik değildir ve bilerek çocuklardan veri toplamayız.</p>
+            <h4 style="font-size: 1rem; margin-top: 1rem; color: #444;">🔹 Reklam ve Kimlik Verileri</h4>
+            <ul>
+                <li>Google Mobile Ads (AdMob) tarafından sağlanan <strong>Advertising ID</strong></li>
+                <li>Bu kimlik isteğe bağlı olarak cihaz ayarlarından sıfırlanabilir veya kapatılabilir</li>
+            </ul>
 
-                <h3>6. Veri Güvenliği</h3>
-                <p>Kullanıcı verilerini korumak için endüstri standardı güvenlik önlemleri alınmaktadır.</p>
+            <h4 style="font-size: 1rem; margin-top: 1rem; color: #444;">🔹 Kullanıcı Tarafından Girilen Veriler</h4>
+            <ul>
+                <li>Depo, ürün, kategori, müşteri ve tedarikçi bilgileri</li>
+                <li>Tüm bu veriler <strong>yalnızca cihazınızda yerel olarak saklanır</strong></li>
+                <li>Uygulama, varsayılan olarak hiçbir kullanıcı verisini harici sunuculara göndermez</li>
+            </ul>
 
-                <h3>7. Kullanıcı Hakları</h3>
-                <p>Kullanıcılar aşağıdaki haklara sahiptir:</p>
-                <ul>
-                    <li>Toplandığı veriler hakkında bilgi talep etme</li>
-                    <li>Veri silmeyi talep etme</li>
-                    <li>Veri işlemeyi iptal etme (uygulanabilir olduğunda)</li>
-                </ul>
+            <h3>2. Verilerin Saklanması</h3>
+            <p>Depom Yanımda'da girdiğiniz tüm iş verileri (ürünler, depolar, satışlar vb.) <strong>sadece cihazınızda</strong> yerel olarak Hive veritabanı kullanılarak saklanır.</p>
+            <p>Bu verilere yalnızca siz ve cihazınızda oturum açmış olan diğer kullanıcılar erişebilir. Hiçbir şekilde HangarSoft sunucularına veya üçüncü taraflara otomatik olarak aktarılmaz.</p>
+            <p><strong>Önemli Not:</strong> Uygulamayı silmeniz durumunda, tüm yerel veriler kalıcı olarak silinecektir. Veri kaybını önlemek için periyodik olarak veri yedeklemesi almanızı öneririz.</p>
 
-                <h3>8. İletişim</h3>
-                <p>Gizlilik politikası hakkında sorularınız varsa, lütfen bize <a href="mailto:hangarsoftwork@gmail.com" style="color: #3C3C46; text-decoration: underline;">hangarsoftwork@gmail.com</a> adresinden ulaşın.</p>
+            <h3>3. Üçüncü Taraf Hizmetleri</h3>
+            <p>Uygulama aşağıdaki üçüncü taraf hizmetlerini kullanabilir. Bu hizmetlerin kendi gizlilik politikaları geçerlidir:</p>
 
-                <h3>9. Politika Değişiklikleri</h3>
-                <p>Bu politika zaman zaman güncellenebilir. En son sürüm her zaman bu sayfada bulunur.</p>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+                <thead>
+                    <tr style="background: var(--light-primary);">
+                        <th style="padding: 0.75rem; text-align: left; border-radius: 0.5rem 0 0 0;">Hizmet Adı</th>
+                        <th style="padding: 0.75rem; text-align: left;">Amaç</th>
+                        <th style="padding: 0.75rem; text-align: left; border-radius: 0 0.5rem 0 0;">Gizlilik Politikası</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 0.75rem;"><strong>Google Mobile Ads (AdMob)</strong></td>
+                        <td style="padding: 0.75rem;">Uygulama içi reklam gösterimi</td>
+                        <td style="padding: 0.75rem;"><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--primary-dark);">google.com/policies</a></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 0.75rem;"><strong>Firebase Analytics</strong></td>
+                        <td style="padding: 0.75rem;">Anonim kullanım istatistikleri</td>
+                        <td style="padding: 0.75rem;"><a href="https://firebase.google.com/support/privacy" target="_blank" style="color: var(--primary-dark);">firebase.google.com/privacy</a></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 0.75rem;"><strong>Firebase Crashlytics</strong></td>
+                        <td style="padding: 0.75rem;">Hata ve çökme raporlaması</td>
+                        <td style="padding: 0.75rem;"><a href="https://firebase.google.com/support/privacy" target="_blank" style="color: var(--primary-dark);">firebase.google.com/privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem;"><strong>Supabase</strong></td>
+                        <td style="padding: 0.75rem;">Hata raporlama ve geri bildirim sistemi</td>
+                        <td style="padding: 0.75rem;"><a href="https://supabase.com/privacy" target="_blank" style="color: var(--primary-dark);">supabase.com/privacy</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4. İzinler</h3>
+            <p>Depom Yanımda aşağıdaki izinleri isteyebilir:</p>
+            <ul>
+                <li><strong>Kamera:</strong> Barkod ve QR kod taraması, ürün fotoğrafı ekleme</li>
+                <li><strong>Hafıza (Depolama):</strong> Veri yedekleme ve geri yükleme, ürün fotoğraflarını saklama</li>
+                <li><strong>İnternet:</strong> Reklam gösterimi, hata raporlama ve uygulama güncellemeleri</li>
+            </ul>
+            <p>Tüm bu izinler isteğe bağlıdır. Herhangi bir izni reddetmeniz durumunda ilgili özelliği kullanamazsınız ancak uygulamanın geri kalanı normal şekilde çalışmaya devam edecektir.</p>
+
+            <h3>5. Reklam Politikası</h3>
+            <p>Uygulama içinde Google AdMob aracılığıyla reklam gösterilmektedir. Bu reklamlar:</p>
+            <ul>
+                <li>Cihazınızın reklam kimliğine dayalı olarak kişiselleştirilebilir</li>
+                <li>Cihaz ayarlarından kişiselleştirilmiş reklamları kapatabilirsiniz</li>
+                <li>Uygulama içi satın alma ile reklamlar kalıcı olarak kaldırılabilir</li>
+            </ul>
+            <p>Kişiselleştirilmiş reklamları kapatmak için cihazınızın <strong>Ayarlar → Gizlilik → Reklamlar</strong> bölümüne gidin ve "Reklamları kişiselleştirmeyi devre dışı bırak" seçeneğini etkinleştirin.</p>
+
+            <h3>6. Çocukların Gizliliği</h3>
+            <p>Depom Yanımda 13 yaş altındaki çocuklara yönelik değildir.</p>
+
+            <h3>7. Kullanıcı Hakları</h3>
+            <p>GDPR ve diğer geçerli veri koruma kanunlarına göre aşağıdaki haklara sahipsiniz:</p>
+            <ul>
+                <li>Toplanan veriler hakkında bilgi talep etme</li>
+                <li>Uygulama verilerinizin tamamen silinmesi (uygulama ayarlarından)</li>
+                <li>Veri işlemeyi kısıtlama isteği</li>
+                <li>Verilerinizi dışa aktarma</li>
+                <li>Şikayet oluşturma hakkı</li>
+            </ul>
+
+            <h3>8. Veri Güvenliği</h3>
+            <p>Kullanıcı verilerini korumak için endüstri standardı güvenlik önlemleri alınmaktadır. Ancak internet üzerinden hiçbir veri iletiminin veya elektronik depolamanın %100 güvenli olmadığını unutmayın.</p>
+
+            <h3>9. İletişim</h3>
+            <p>Gizlilik politikası hakkında sorularınız, talepleriniz veya endişeleriniz varsa lütfen bizimle iletişime geçin:</p>
+
+            <div style="background: var(--light-primary); padding: 1.5rem; border-radius: var(--radius); margin-top: 1rem; border-left: 4px solid var(--primary-dark);">
+                <p style="margin: 0.25rem 0;"><strong>E-posta:</strong> <a href="mailto:hangarsoftwork@gmail.com" style="color: var(--primary-dark); text-decoration: underline;">hangarsoftwork@gmail.com</a></p>
+                <p style="margin: 0.25rem 0;"><strong>GitHub:</strong> <a href="https://github.com/CaptainChair000" target="_blank" style="color: var(--primary-dark); text-decoration: underline;">github.com/CaptainChair000</a></p>
             </div>
-        </main>
-    </div>
+
+            <h3>10. Politika Değişiklikleri</h3>
+            <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler olması durumunda uygulama içi bildirim ile bilgilendirileceksiniz. En son sürüm her zaman bu sayfada yayınlanır.</p>
+
+            <p style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #eee; color: var(--text-muted); font-size: 0.85rem;">Depom Yanımda v1.1.3+6 | HangarSoft © 2026</p>
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 HangarSoft. Tüm hakları saklıdır.</p>
-        <p>Bize <a href="mailto:hangarsoftwork@gmail.com">iletişime geçin</a></p>
-        <p><a href="privacy-policy">Gizlilik Politikası</a></p>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-brand">
+                    <img src="assets/site-logo.png" alt="HangarSoft">
+                    <span>HangarSoft</span>
+                </div>
+                <p>Akıllı depo yönetimi ve mobil çözümler üreten bağımsız bir geliştirici stüdyosu.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Uygulama</h4>
+                <ul>
+                    <li><a href="index.html#ozellikler">Özellikler</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.fomeon.depomyanimda" target="_blank">Play Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Yasal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Gizlilik Politikası</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <ul>
+                    <li><a href="mailto:hangarsoftwork@gmail.com">E-posta</a></li>
+                    <li><a href="https://github.com/CaptainChair000" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 HangarSoft. Tüm hakları saklıdır.</p>
+            <p><a href="mailto:hangarsoftwork@gmail.com">hangarsoftwork@gmail.com</a></p>
+        </div>
     </footer>
+
 </body>
 </html>

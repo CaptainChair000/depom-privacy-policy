@@ -3,245 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oyun - HangarSoft</title>
-    <meta name="description" content="HangarSoft Oyun">
-    <meta name="theme-color" content="#3C3C46">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%233C3C46' width='100' height='100'/><text x='50' y='65' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #3C3C46 0%, #1E1E32 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #3C3C46;
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #3C3C46;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        main {
-            background: white;
-            margin: 2rem auto;
-            border-radius: 1rem;
-            padding: 4rem 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        main h1 {
-            color: #3C3C46;
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
-        }
-
-        .game-icon {
-            font-size: 5rem;
-            margin: 1rem 0;
-        }
-
-        main p {
-            color: #666;
-            font-size: 1.1rem;
-            margin: 1rem 0;
-            line-height: 1.6;
-        }
-
-        .coming-soon {
-            display: inline-block;
-            background: #3C3C46;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 2rem 0;
-        }
-
-        .features {
-            margin-top: 3rem;
-            text-align: left;
-        }
-
-        .features h2 {
-            color: #3C3C46;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .feature-item {
-            background: #f9fafb;
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            border-left: 4px solid #3C3C46;
-        }
-
-        .feature-item h3 {
-            color: #3C3C46;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-item p {
-            font-size: 0.95rem;
-            color: #666;
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #EBEBF5;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            main {
-                padding: 2rem 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            main h1 {
-                font-size: 1.8rem;
-            }
-
-            .game-icon {
-                font-size: 3rem;
-            }
-        }
-    </style>
+    <title>Oyun Projesi — HangarSoft</title>
+    <meta name="description" content="HangarSoft yakında gelicek oyun projesi">
+    <meta name="theme-color" content="#32323C">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2332323C' width='100' height='100'/><text x='50' y='65' font-size='55' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/game.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
+
     <header>
         <nav>
-            <a href="index.html" class="logo">HangarSoft</a>
-            <ul>
+            <a href="index.html" class="nav-brand">
+                <img src="assets/site-logo.png" alt="HangarSoft">
+                <span>HangarSoft</span>
+            </a>
+            <ul class="nav-links">
                 <li><a href="index.html">Anasayfa</a></li>
                 <li><a href="index.html">Uygulamalar</a></li>
-                <li><a href="privacy-policy">Gizlilik Politikası</a></li>
-                <li><a href="index.html">İletişim</a></li>
+                <li><a href="privacy-policy.html">Gizlilik Politikası</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
             </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menüyü Aç/Kapat">☰</button>
         </nav>
     </header>
 
-    <div class="container">
-        <main>
-            <div class="game-icon">🎮</div>
-            <h1>Oyun (Çok Yakında!)</h1>
-            <p>HangarSoft tarafından geliştirilen yeni oyun deneyimi</p>
-            
-            <div class="coming-soon">Çok Yakında Yayında</div>
+    <main class="game-main">
+        <div class="game-icon">🎮</div>
+        <h1>Oyun (Çok Yakında!)</h1>
+        <p>HangarSoft tarafından geliştirilen yeni oyun deneyimi</p>
 
-            <p style="margin-top: 2rem; font-size: 1rem; color: #555;">
-                Eğlenceli ve bağımlı olmayan bir oyun deneyimi için bizi izleyin!<br>
-                Oyun hakkında güncellemeler için <strong>hangarsoftwork@gmail.com</strong> adresine ulaşabilirsiniz.
-            </p>
+        <div class="coming-soon">Çok Yakında Yayında</div>
 
-            <div class="features">
-                <h2>Oyun Özellikleri</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>🎯 Akıllı Gameplay</h3>
-                        <p>Zorlayıcı ama bağımlı olmayan oyun mekanikleeri</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🏆 Puan Sistemi</h3>
-                        <p>Leaderboard ve başarı sistemi ile rekabet etme</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>📱 Offline Oyun</h3>
-                        <p>İnternetiniz olmasa bile oyunun tadını çıkarın</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🎨 Modern Tasarım</h3>
-                        <p>Güzel ve sade arayüz tasarımı</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>🚀 Seviyeler</h3>
-                        <p>Seviyelendirilmiş zorluk ve ilerleme sistemi</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>⭐ İyileştirmeler</h3>
-                        <p>Güç-up'lar ve bonus özellikleri açın</p>
-                    </div>
+        <p style="margin-top: 2rem; font-size: 1rem; color: #555;">
+            Eğlenceli ve bağımlı olmayan bir oyun deneyimi için bizi izleyin!<br>
+            Oyun hakkında güncellemeler için <strong>hangarsoftwork@gmail.com</strong> adresine ulaşabilirsiniz.
+        </p>
+
+        <div class="features">
+            <h2>Oyun Özellikleri</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>🎯 Akıllı Gameplay</h3>
+                    <p>Zorlayıcı ama bağımlı olmayan oyun mekanikleri</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🏆 Puan Sistemi</h3>
+                    <p>Leaderboard ve başarı sistemi ile rekabet etme</p>
+                </div>
+                <div class="feature-item">
+                    <h3>📱 Offline Oyun</h3>
+                    <p>İnternetiniz olmasa bile oyunun tadını çıkarın</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🎨 Modern Tasarım</h3>
+                    <p>Güzel ve sade arayüz tasarımı</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🚀 Seviyeler</h3>
+                    <p>Seviyelendirilmiş zorluk ve ilerleme sistemi</p>
+                </div>
+                <div class="feature-item">
+                    <h3>⭐ İyileştirmeler</h3>
+                    <p>Güç-up'lar ve bonus özellikleri açın</p>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 HangarSoft. Tüm hakları saklıdır.</p>
-        <p>Bize <a href="mailto:hangarsoftwork@gmail.com">iletişime geçin</a></p>
-        <p><a href="privacy-policy">Gizlilik Politikası</a></p>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-brand">
+                    <img src="assets/site-logo.png" alt="HangarSoft">
+                    <span>HangarSoft</span>
+                </div>
+                <p>Akıllı depo yönetimi ve mobil çözümler üreten bağımsız bir geliştirici stüdyosu.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Uygulama</h4>
+                <ul>
+                    <li><a href="index.html#ozellikler">Özellikler</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.fomeon.depomyanimda" target="_blank">Play Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Yasal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Gizlilik Politikası</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <ul>
+                    <li><a href="mailto:hangarsoftwork@gmail.com">E-posta</a></li>
+                    <li><a href="https://github.com/CaptainChair000" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 HangarSoft. Tüm hakları saklıdır.</p>
+            <p><a href="mailto:hangarsoftwork@gmail.com">hangarsoftwork@gmail.com</a></p>
+        </div>
     </footer>
+
 </body>
 </html>

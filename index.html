@@ -3,453 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HangarSoft - Geliştirici Portalı</title>
-    <meta name="description" content="HangarSoft tarafından geliştirilen uygulamalar ve hizmetler">
-    <meta name="theme-color" content="#3C3C46">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%233C3C46' width='100' height='100'/><text x='50' y='65' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #3C3C46 0%, #1E1E32 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #3C3C46;
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #3C3C46;
-        }
-
-        .hero {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #3C3C46;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        section {
-            background: white;
-            margin: 2rem auto;
-            border-radius: 1rem;
-            padding: 3rem 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            color: #3C3C46;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .app-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .app-card:hover {
-            box-shadow: 0 5px 15px rgba(60, 60, 70, 0.2);
-            border-color: #3C3C46;
-        }
-
-        .app-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .app-card h3 {
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-
-        .app-card p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .links-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .link-item {
-            padding: 1rem;
-            background: #f9fafb;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            color: #3C3C46;
-            border-left: 4px solid #3C3C46;
-            transition: all 0.3s;
-        }
-
-        .link-item:hover {
-            background: #eff6ff;
-            padding-left: 1.5rem;
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        #privacy-content {
-            line-height: 1.8;
-            color: #555;
-        }
-
-        #privacy-content h3 {
-            color: #6366f1;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #privacy-content p, #privacy-content li {
-            margin-bottom: 0.8rem;
-        }
-
-        #privacy-content ul {
-            margin-left: 1.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            section {
-                padding: 1.5rem 1rem;
-            }
-        }
-    </style>
+    <title>Depom Yanımda — Akıllı Depo Yönetimi</title>
+    <meta name="description" content="Depom Yanımda ile envanterinizi akıllıca yönetin. Barkod tarama, çoklu depo, satış takibi ve çok daha fazlası.">
+    <meta name="theme-color" content="#32323C">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2332323C' width='100' height='100'/><text x='50' y='65' font-size='55' font-weight='bold' fill='white' text-anchor='middle'>D</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">HangarSoft</a>
-            <ul>
-                <li><a href="#" onclick="showHome(); return false;">Anasayfa</a></li>
-                <li><a href="#" onclick="showApps(); return false;">Uygulamalar</a></li>
-                <li><a href="privacy-policy">Gizlilik Politikası</a></li>
-                <li><a href="#" onclick="showContact(); return false;">İletişim</a></li>
+            <a href="#" class="nav-brand">
+                <img src="assets/site-logo.png" alt="HangarSoft">
+                <span>HangarSoft</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#ozellikler">Özellikler</a></li>
+                <li><a href="#uygulama">Uygulama</a></li>
+                <li><a href="privacy-policy.html">Gizlilik</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.fomeon.depomyanimda" target="_blank" class="btn-nav">Play Store'da İndir</a></li>
             </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menüyü Aç/Kapat">☰</button>
         </nav>
     </header>
 
-    <main id="home-section">
-        <div class="hero">
-            <h1>HangarSoft - Geliştirici Portalı</h1>
-            <p>Akıllı Depo Yönetimi ve Mobil Çözümleri</p>
-            <div class="cta-buttons">
-                <button class="btn btn-primary" onclick="showApps(); return false;">Uygulamaları Keşfet</button>
-                <button class="btn btn-secondary" onclick="showContact(); return false;">İletişime Geç</button>
-            </div>
-        </div>
-
-        <section>
-            <div class="container">
-                <h2>Ürünlerimiz</h2>
-                <div class="apps-grid">
-                    <div class="app-card">
-                        <div class="app-icon">📦</div>
-                        <h3>Depom Yanımda</h3>
-                        <p><strong>Akıllı Depo Yönetim Sistemi</strong></p>
-                        <ul style="text-align: left; margin: 1rem 0; font-size: 0.9rem; list-style: none;">
-                            <li>✓ Gerçek zamanlı envanter takibi</li>
-                            <li>✓ Barcode/QR kod taraması</li>
-                            <li>✓ Kategori ve lokasyon yönetimi</li>
-                            <li>✓ Detaylı raporlama ve analitik</li>
-                            <li>✓ Çoklu depo desteği</li>
-                        </ul>
-                        <a href="https://play.google.com/store/apps/details?id=com.fomeon.depomyanimda" target="_blank" class="btn btn-primary" style="display: inline-block; font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none;">Play Store'da Yükle</a>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge"><span></span> v1.1.3 şimdi yayında</div>
+                <h1>Depo Yönetimi<br><span>Artık Cebinizde</span></h1>
+                <p>Depom Yanımda ile envanterinizi akıllıca takip edin. Barkod tarama, çoklu depo desteği, satış takibi ve kapsamlı raporlama — hepsi tek bir uygulamada.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>6+</strong>
+                        <label>Dil Desteği</label>
                     </div>
-                    <div class="app-card">
-                        <div class="app-icon">🎮</div>
-                        <h3>Oyun (Yakında)</h3>
-                        <p><strong>Eğlenceli ve Eğitici Oyun Deneyimi</strong></p>
-                        <ul style="text-align: left; margin: 1rem 0; font-size: 0.9rem; list-style: none;">
-                            <li>✓ Bağımlı olmayan gameplay</li>
-                            <li>✓ Puan sistemi ve leaderboard</li>
-                            <li>✓ Çeşitli seviyelendirilmiş zorluk</li>
-                            <li>✓ Offline oyun desteği</li>
-                            <li>✓ İyileştirmeler ve başarılar</li>
-                        </ul>
-                        <a href="game" class="btn btn-secondary" style="display: inline-block; font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none;">Detayları Gör</a>
+                    <div class="hero-stat">
+                        <strong>∞</strong>
+                        <label>Depo Sayısı</label>
                     </div>
+                    <div class="hero-stat">
+                        <strong>100%</strong>
+                        <label>Offline</label>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://play.google.com/store/apps/details?id=com.fomeon.depomyanimda" target="_blank" class="btn btn-white">
+                        📲 Play Store'da İndir
+                    </a>
+                    <a href="#ozellikler" class="btn btn-outline">Özellikleri Keşfet</a>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <section id="apps-section" class="hidden">
-        <div class="container">
-            <h2>Uygulamalarımız & Oyunlar</h2>
-            <div class="apps-grid">
-                <div class="app-card">
-                    <div class="app-icon">📦</div>
-                    <h3>Depom Yanımda</h3>
-                    <p><strong>Akıllı Depo Yönetim Sistemi</strong></p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Modern depo yönetim sistemi. Gerçek zamanlı envanter takibi, barcode scanning ve akıllı raporlama özellikleri ile stok yönetimini kolaylaştırır.</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://play.google.com/store/apps/details?id=com.fomeon.depomyanimda" target="_blank" class="btn btn-primary" style="display: inline-block; font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none; border-radius: 0.25rem;">Play Store'da Yükle</a>
-                    </div>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🎮</div>
-                    <h3>Oyun (Yakında)</h3>
-                    <p><strong>Eğlenceli ve Eğitici Oyun Deneyimi</strong></p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">HangarSoft tarafından geliştirilen yeni oyun. Eğlenceli gameplay, puan sistemi ve offline desteği ile bağımlı olmayan bir oyun deneyimi.</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="game" class="btn btn-secondary" style="display: inline-block; font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none;">Detayları Gör</a>
-                    </div>
-                </div>
+            <div class="hero-visual">
+                <div class="hero-orbit"><div class="hero-orbit-dot"></div></div>
+                <img src="assets/depom-yanimda-logo.png" alt="Depom Yanımda" class="hero-logo">
             </div>
         </div>
     </section>
 
-    <section id="privacy-section" class="hidden">
-        <div class="container">
-            <h2>Gizlilik Politikası</h2>
-            <div id="privacy-content">
-                <p><strong>Son Güncelleme: 22 Nisan 2026</strong></p>
-                
-                <h3>1. Giriş</h3>
-                <p>HangarSoft, kullanıcıların gizliliğine saygı duymaktadır. Bu Gizlilik Politikası, uygulamalarımız aracılığıyla topladığımız verileri açıklamaktadır.</p>
-
-                <h3>2. Toplanan Veriler</h3>
-                <p>Uygulamalarımız aşağıdaki verileri toplayabilir:</p>
-                <ul>
-                    <li>Cihaz bilgileri (model, işletim sistemi sürümü)</li>
-                    <li>Uygulama kullanım istatistikleri</li>
-                    <li>Çökmeler ve hata raporları</li>
-                    <li>Google Mobile Ads tarafından sağlanan reklamcılık kimlikleri</li>
-                </ul>
-
-                <h3>3. Verilerin Kullanım Amacı</h3>
-                <p>Toplanan veriler aşağıdaki amaçlarla kullanılır:</p>
-                <ul>
-                    <li>Uygulamanın performansını geliştirmek</li>
-                    <li>Sorunları tanılamak ve çözmek</li>
-                    <li>Kişiselleştirilmiş reklam göstermek (Google Mobile Ads)</li>
-                    <li>Hizmetlerimizi iyileştirmek</li>
-                </ul>
-
-                <h3>4. Üçüncü Taraf Hizmetleri</h3>
-                <p>Uygulamalarımız aşağıdaki üçüncü taraf hizmetlerini kullanabilir:</p>
-                <ul>
-                    <li><strong>Google Mobile Ads:</strong> Reklam gösterimi için</li>
-                    <li><strong>Firebase Analytics:</strong> Uygulama analitikleri için</li>
-                    <li><strong>Crash Reporting:</strong> Hata raporlaması için</li>
-                </ul>
-
-                <h3>5. Çocukların Gizliliği</h3>
-                <p>Uygulamalarımız 13 yaş altındaki çocuklara yönelik değildir ve bilerek çocuklardan veri toplamayız.</p>
-
-                <h3>6. Veri Güvenliği</h3>
-                <p>Kullanıcı verilerini korumak için endüstri standardı güvenlik önlemleri alınmaktadır.</p>
-
-                <h3>7. Kullanıcı Hakları</h3>
-                <p>Kullanıcılar aşağıdaki haklara sahiptir:</p>
-                <ul>
-                    <li>Toplandığı veriler hakkında bilgi talep etme</li>
-                    <li>Veri silmeyi talep etme</li>
-                    <li>Veri işlemeyi iptal etme (uygulanabilir olduğunda)</li>
-                </ul>
-
-                <h3>8. İletişim</h3>
-                <p>Gizlilik politikası hakkında sorularınız varsa, lütfen bize hangarsoftwork@gmail.com adresinden ulaşın.</p>
-
-                <h3>9. Politika Değişiklikleri</h3>
-                <p>Bu politika zaman zaman güncellenebilir. En son sürüm her zaman bu sayfada bulunur.</p>
+    <!-- Features -->
+    <section class="section" id="ozellikler">
+        <div class="section-header fade-in">
+            <div class="section-label">Neler Sunuyoruz</div>
+            <h2>Kapsamlı Depo Yönetim Araçları</h2>
+            <p>Depom Yanımda, küçük ve orta ölçekli işletmeler için tasarlanmış, kullanımı kolay ancak güçlü bir envanter yönetim sistemidir.</p>
+        </div>
+        <div class="home-features">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📦</div>
+                <h3>Çoklu Depo Yönetimi</h3>
+                <p>Sınırsız sayıda depo oluşturun, ana depolarınızı işaretleyin ve tümünü tek ekrandan yönetin.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📊</div>
+                <h3>Gerçek Zamanlı Envanter</h3>
+                <p>Toplam stok, ürün çeşidi, maliyet ve tahmini değer gibi kritik metrikleri anında görün.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📷</div>
+                <h3>Barkod & QR Tarama</h3>
+                <p>Kameranızı kullanarak ürün barkodlarını hızlıca tarayın, manuel girişleri ortadan kaldırın.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🏷️</div>
+                <h3>Kategori & Alt Kategori</h3>
+                <p>Ürünlerinizi hiyerarşik kategorilere ayırın. Alt kategori desteği ile düzenli kalın.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🛒</div>
+                <h3>Satış Takibi</h3>
+                <p>Satış geçmişini kaydedin, müşterilerle ilişkilendirin ve gelirlerinizi analiz edin.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">👥</div>
+                <h3>Müşteri & Tedarikçi</h3>
+                <p>İş bağlantılarınızı yönetin, satın alma ve satış geçmişlerini takip edin.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🔔</div>
+                <h3>Akıllı Bildirimler</h3>
+                <p>Stok azalma uyarıları, fiyat güncelleme hatırlatıcıları ve popüler ürün analizleri.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📈</div>
+                <h3>Grafikler & Analitik</h3>
+                <p>Özelleştirilebilir renklerle görsel grafikler ve detaylı envanter raporları.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📑</div>
+                <h3>Şablon Sistemi</h3>
+                <p>Sık kullandığınız ürün yapılarını şablon olarak kaydedin, zamandan tasarruf edin.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🌙</div>
+                <h3>Karanlık & Açık Tema</h3>
+                <p>Göz yorgunluğunu azaltan karanlık mod ve modern açık tema arasında geçiş yapın.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📤</div>
+                <h3>Veri Aktarımı</h3>
+                <p>Verilerinizi dışa aktarın veya içe aktarın. Farklı cihazlar arasında kolayca taşıyın.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🖥️</div>
+                <h3>Tablet Desteği</h3>
+                <p>Telefon ve tabletlerde sorunsuz çalışır. Yatay ve dikey mod desteği ile her ekrana uyum sağlar.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact-section" class="hidden">
-        <div class="container">
-            <h2>İletişim</h2>
-            <div class="links-section">
-                <a href="mailto:hangarsoftwork@gmail.com" class="link-item">
-                    📧 E-posta Gönder
-                </a>
-                <a href="https://github.com/CaptainChair000" class="link-item" target="_blank">
-                    🐙 GitHub
-                </a>
-                <a href="#" class="link-item">
-                    🔗 Diğer Bağlantılar
-                </a>
+    <!-- Showcase: App Detail -->
+    <section class="showcase" id="uygulama">
+        <div class="showcase-grid">
+            <div class="showcase-content fade-in">
+                <div class="section-label">Nasıl Çalışır</div>
+                <h3>Her Şeyi Basitleştiren Bir Akış</h3>
+                <p>Depom Yanımda, karmaşık envanter süreçlerini sade bir deneyime dönüştürür. Ürün ekleyin, depolara atayın, satışlarınızı kaydedin ve tüm verilerinizi görsel olarak analiz edin.</p>
+                <ul class="showcase-list">
+                    <li>Hızlı ürün ekleme (kamera, galeri, barkod)</li>
+                    <li>Otomatik maliyet ve satış fiyatı hesaplama</li>
+                    <li>Depo bazlı stok takibi</li>
+                    <li>Müşteri ve tedarikçi ilişki yönetimi</li>
+                    <li>Gelişmiş arama ve filtreleme</li>
+                    <li>Çevrimdışı çalışma (veriler cihazda güvenle saklanır)</li>
+                </ul>
             </div>
-            <div style="margin-top: 2rem; padding: 1.5rem; background: #f0f9ff; border-left: 4px solid #3C3C46; border-radius: 0.5rem;">
-                <h3 style="color: #3C3C46; margin-bottom: 0.5rem;">Bize Yazın</h3>
-                <p>E-posta: <strong>hangarsoftwork@gmail.com</strong></p>
+            <div class="showcase-visual fade-in">
+                <img src="assets/depom-yanimda-logo.png" alt="Depom Yanımda Uygulama Logosu">
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 HangarSoft. Tüm hakları saklıdır.</p>
-        <p>Bize <a href="mailto:hangarsoftwork@gmail.com" style="color: #EBEBF5; text-decoration: underline;">iletişime geçin</a></p>
-        <p><a href="privacy-policy" style="color: #EBEBF5; text-decoration: underline;">Gizlilik Politikası</a></p>
+    <!-- Platforms & Languages -->
+    <section class="platforms">
+        <h3>Her Platformda, Her Dilde</h3>
+        <div class="platform-grid">
+            <div class="platform-item">
+                <div class="icon">📱</div>
+                <label>Telefon</label>
+            </div>
+            <div class="platform-item">
+                <div class="icon">💻</div>
+                <label>Tablet</label>
+            </div>
+            <div class="platform-item">
+                <div class="icon">🔄</div>
+                <label>Yatay & Dikey</label>
+            </div>
+        </div>
+        <div class="lang-flags">
+            <span class="lang-flag">🇹🇷 Türkçe</span>
+            <span class="lang-flag">🇬🇧 English</span>
+            <span class="lang-flag">🇸🇦 العربية</span>
+            <span class="lang-flag">🇨🇳 中文</span>
+            <span class="lang-flag">🇮🇳 हिंदी</span>
+            <span class="lang-flag">🇯🇵 日本語</span>
+        </div>
+    </section>
+
+    <!-- Future Projects -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <div class="section-label">Yakında</div>
+            <h2>Gelecek Projeler</h2>
+            <p>Depom Yanımda'yı daha da güçlendirecek yeni özellikler ve projeler üzerinde çalışıyoruz.</p>
+        </div>
+        <div class="future-grid">
+            <div class="feature-card fade-in" style="text-align: center;">
+                <div class="feature-icon" style="margin: 0 auto 1rem;">🎮</div>
+                <h3>Oyun Projesi</h3>
+                <p>Şu anda aktif geliştirme aşamasında olmasa da, ileride eğlenceli ve bağımlılık yapmayan bir oyun deneyimi sunmayı planlıyoruz. Bizi takipte kalın!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Hemen Ücretsiz İndirin</h2>
+        <p>Depom Yanımda'yı Google Play Store'dan ücretsiz indirin ve envanter yönetiminizi bir üst seviyeye taşıyın.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.fomeon.depomyanimda" target="_blank" class="btn btn-white" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+            📲 Google Play'den İndir
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="iletisim">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-brand">
+                    <img src="assets/site-logo.png" alt="HangarSoft">
+                    <span>HangarSoft</span>
+                </div>
+                <p>Akıllı depo yönetimi ve mobil çözümler üreten bağımsız bir geliştirici stüdyosu. Depom Yanımda, küçük işletmelerin büyümesine yardımcı olmak için tasarlandı.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Uygulama</h4>
+                <ul>
+                    <li><a href="#ozellikler">Özellikler</a></li>
+                    <li><a href="#uygulama">Nasıl Çalışır</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.fomeon.depomyanimda" target="_blank">Play Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Yasal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Gizlilik Politikası</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <ul>
+                    <li><a href="mailto:hangarsoftwork@gmail.com">E-posta Gönder</a></li>
+                    <li><a href="https://github.com/CaptainChair000" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 HangarSoft. Tüm hakları saklıdır.</p>
+            <p>Depom Yanımda v1.1.3+6 · <a href="mailto:hangarsoftwork@gmail.com">hangarsoftwork@gmail.com</a></p>
+        </div>
     </footer>
 
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('section, main').forEach(section => {
-                section.classList.add('hidden');
-            });
-            document.getElementById(sectionId).classList.remove('hidden');
-            window.scrollTo(0, 0);
-        }
-
-        function showHome() {
-            document.getElementById('home-section').classList.remove('hidden');
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.add('hidden');
-            });
-            window.scrollTo(0, 0);
-        }
-
-        function showApps() {
-            showSection('apps-section');
-        }
-
-        function showPrivacy() {
-            showSection('privacy-section');
-        }
-
-        function showContact() {
-            showSection('contact-section');
-        }
-    </script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+/* ═══════════════════════════════════════════════════════════════
+   Privacy Policy Page Specific Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+.privacy-main {
+    background: var(--white);
+    margin: 8rem auto 2rem;
+    border-radius: var(--radius);
+    padding: 3rem 2rem;
+    box-shadow: var(--shadow);
+    max-width: 900px;
+}
+
+.privacy-main h1 {
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+#privacy-content {
+    line-height: 1.8;
+    color: #555;
+}
+
+#privacy-content h3 {
+    color: var(--primary-dark);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#privacy-content p,
+#privacy-content li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+#privacy-content ul {
+    margin-left: 1.5rem;
+}
+
+#privacy-content strong {
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .privacy-main {
+        margin-top: 6rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .privacy-main h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}
